@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="is">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PD455NMSQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4PD455NMSQ');
+</script>
+
+    <title>Kinnargata 92</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans&family=Raleway:wght@100&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="logo"> </div>
+    <div class="topnav" id="myTopnav" onclick="toggleShow(this)">
+        <a href="/home">Heim</a>
+        <a href="#news">Íbúðir</a>
+        <a href="#contact">Teymið</a>
+        <a href="#about">Hafa samband</a>
+    </div>
+    <div class="burger" onclick="burgerCLick(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div id="scroll"></div>
+
+</header>
+<body>
+<div class="main-column">
+
+    <div class="frontpage">
+        
+    </div>
+
+    <div class="wrap-box">
+        <div class="cta-block">
+            <div class="cta-block__img">
+            </div>
+            <h3>Gjafakort</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam bibendum id leo ac tempus. Donec ornare lacinia
+                imperdiet. Fusce maximus augue id tellus fermentum
+                hendrerit.</p>
+            <button>Lesa meira</button>
+        </div>
+        <div class="cta-block">
+            <div class="cta-block__img">
+            </div>
+            <h3>Gjafakort</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam bibendum id leo ac tempus. Donec ornare lacinia
+                imperdiet. Fusce maximus augue id tellus fermentum
+                hendrerit.</p>
+            <button>Lesa meira</button>
+        </div>
+        <div class="cta-block">
+            <div class="cta-block__img">
+            </div>
+            <h3>Gjafakort</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nam bibendum id leo ac tempus. Donec ornare lacinia
+                imperdiet. Fusce maximus augue id tellus fermentum
+                hendrerit.</p>
+            <button>Lesa meira</button>
+        </div>
+    </div>
+
+    <h2>Horizontal Scroller</h2>
+
+    <div class="horizontal-scroller">
+        <img onclick="toggleFullscreen(this)" src="media/iceberg.jpg" alt="iceberg" />
+        <img onclick="toggleFullscreen(this)" src="media/floor.png" alt="iceberg" />
+        <img onclick="toggleFullscreen(this)" src="media/Ashamar_44_south.jpg" alt="iceberg" />
+        <img onclick="toggleFullscreen(this)" src="media/iceberg.jpg" alt="iceberg" />
+        <img onclick="toggleFullscreen(this)" src="media/iceberg.jpg" alt="iceberg" />
+        <img onclick="toggleFullscreen(this)" src="media/iceberg.jpg" alt="iceberg" />
+        <button class="light">Lesa meira</button>
+        <div class="fullscreenview">
+            <span onclick="toggleFullscreen(this)" class="close-fullscreen">&times;</span>
+        </div>
+    </div>
+
+    <h2>Image Map</h2>
+
+<div class="image-map-flex">
+    <img id="building" src="media/frontpage.jpg" usemap="#building-map">
+    <img id="floor" src="media/floor.png" usemap="#floor-map">
+   
+</div>
+<map id="map1" name="building-map">
+    <area target="_self" alt="48-0201" title="48-0201" href="/" coords="1764,1639,1750,1893,2000,1897,2177,1893,2856,1929,2873,1635,2177,1536" shape="poly">
+</map>
+<map id="map2" name="floor-map">
+    <area target="_self" alt="48-0102" title="48-0102" href="/" coords="121,675,119,1284,516,1285,516,677" shape="poly">
+</map>
+
+
+
+    <!--SNEAK PEEK APT SECTION-->
+    <div id="front-page-apt-view" class="hide">
+        <h2 id="front-page-apt-view-title"></h2>
+        <div class="row">
+            <img id="floor-plan-peek" src="media/images/floor-plans/42/0103.jpg"/>
+            <ul class="apt">
+                <li id="haed"><strong>Hæð:</strong><span>1</span></li>
+                <li id="hrb"><strong>Herbergi:</strong><span>77 m<sup>2</sup></sup></span></li>
+                <li id="staerd"><strong>Birtir fermetrar:</strong><span>77 m<sup>2</sup></span></li>
+                <li id="geymsla"><strong>Geymsla:</strong><span>7 m<sup>2</sup></span></li>
+                <li id="bilastaedi"><strong>Bílastæði í kjallara:</strong><span></span></li>
+                <li id="verd"><strong>Verð:</strong><span>Birt síðar</span></li>
+                <li id="skilalysing"><i class="fa fa-file-pdf-o" aria-hidden="true"></i><strong
+                        onclick="location.href='media/skilalysing.pdf'">Skilalýsing</strong></li>
+            </ul>
+        </div>
+        
+        <button id="front-page-apt-view-button" class="button dark-button"><i class="fa fa-info"></i>
+            Nánar</button>
+    </div>
+
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/image-map-resizer.js"></script>
+<script src="js/image-map-highlighter.js"></script>
+
+
+<script>
+    $('map').imageMapResize();
+    
+
+
+    $('#floor, #building').maphilight(
+        {
+            fillColor: '00ff00',
+            fillOpacity: 0.7,
+            strokeColor: '000000'
+        }
+    );
+
+    
+    
+
+    // $('#apt1-img').mouseover(function(e) {
+    //         $('#apt1-floor').mouseover();
+    //     }).mouseout(function(e) {
+    //         $('#apt1-floor').mouseout();
+    //     }).click(function(e) { e.preventDefault(); });
+</script>
+<!--script src="js/image-map.js"></script-->
+</body>
+
+</html>

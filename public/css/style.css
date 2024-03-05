@@ -1,0 +1,330 @@
+
+:root {
+    /* Color palette */
+    --main: #EDF1D6;
+    --secondary: #9DC08B;
+    --accent: #40513B;
+
+    /* Neutral colors */
+    --white-text: #ffffff;
+    --dark-text: #000000;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    background-color: var(--main);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main-column {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.frontpage {
+    height:100vh;
+    width:100vw;
+    background-image: url(../media/frontpage.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.row {
+    display:flex;
+    flex-direction: row;
+}
+
+img {
+    max-width: 100%;
+    max-height: 90vh;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: transparent;
+    position:fixed;
+    top:0;
+    right:0;
+    overflow: hidden;
+    z-index:10;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: var(--dark-text);
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.topnav a:hover {
+    box-shadow: inset 450px 0 0 0 var(--dark-text);
+    color: var(--main)
+  }
+
+.burger {
+    display:none;
+}
+.logo {
+    position:fixed;
+    z-index:10;
+    float:left;
+    height:52px;
+    width: 52px;
+    background-image: url(../media/logo.png);
+    background-size: cover;
+}
+
+#scroll {
+    display:none;
+    position: fixed;
+    background-color: var(--main);
+    height:48px;
+    width:100vw;
+    opacity: 0.8;
+    top:0;
+}
+.wrap-box {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    height: auto;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius:10px;
+}
+.image-map-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    height: auto;
+    width: 100%;
+    border-radius:10px;
+}
+#floor {
+    max-height:50vh;
+}
+
+.horizontal-scroller {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    height: 300px;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius:10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.horizontal-scroller img {
+    height:100%;
+    width:auto;
+    margin-right: 15px;
+
+}
+.horizontal-scroller .fullscreenview {
+    display:none;
+    justify-content: center;
+    background-color: var(--dark-text);
+    background-image: url(../media/iceberg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    position: fixed;
+    height:100vh;
+    width:100vw;
+    top:0;
+    z-index: 10;
+}
+.horizontal-scroller::-webkit-scrollbar {
+    display: none;
+}
+.close-fullscreen {
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--white-text);
+    padding: 10px;
+    margin: 10px;
+    font-size: 42px;
+    cursor: pointer;
+}
+/* CTA Block styles */
+
+.cta-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    height: auto;
+    width: 80vw;
+    max-width:400px;
+    background-color: var(--secondary);
+    border-radius:10px;
+}
+.cta-block__img {
+    width: 100%;
+    height:240px;
+    max-width: 700px;
+    margin: 0;
+    background-image: url(../media/iceberg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:10px;
+}
+ button {
+    background-color: var(--accent);
+    color: var(--white-text);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+button:hover {
+    background-color: var(--main);
+    color: var(--dark-text);
+}
+
+button .light {
+    background-color: var(--main);
+    color: var(--dark-text);
+}
+button .light:hover {
+    background-color: var(--accent);
+    color: var(--white-text);
+}
+
+#front-page-apt-view {
+    margin:10px 0px 10px 0;
+    display:flex;
+    align-self:center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#floor-plan-peek {
+    max-width: 60vw;
+}
+.hide {
+    display: none!important;
+}
+.apt {
+    list-style: none;
+    margin: 20px;
+    padding:0;
+}
+
+.apt-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.apt li {
+    text-align: left;
+    border-bottom: 1px dashed var(--light-background-highlight);
+}
+
+
+.apt li strong {
+    display: inline-block;
+}
+
+.apt li span {
+    float: right;
+}
+
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 760px) {
+    .burger {
+        position: fixed;
+        top:0;
+        right:0;
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+        margin:5px;
+        z-index: 10;
+    }
+    .logo {
+        position: fixed;
+        z-index: 10;
+    }
+
+    .bar1, .bar2,.bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: var(--dark-text);
+        margin: 6px 0;
+        transition: 0.4s;
+        z-index:10;
+    }
+    /* Rotate first bar */
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+        background-color: var(--white-text);
+
+    }
+
+    /* Fade out the second bar */
+    .change .bar2 {opacity: 0;}
+
+    /* Rotate last bar */
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+        background-color: var(--white-text);
+
+    }
+    .topnav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.95;
+        background-color: var(--secondary);
+        justify-content:center;
+    }
+    .topnav a {
+        color: var(--white-text);
+        font-size: 38px;
+    }
+    .show {
+        display:flex;
+    }
+
+
+}
