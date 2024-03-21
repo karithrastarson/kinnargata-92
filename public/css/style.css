@@ -289,6 +289,25 @@ button .light:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: scale(1.05);
 }
+.specs > p > i {
+    margin-right:10px;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: var(--white-text);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.card-button:hover {
+    background-color: var(--white-text);
+    color: var(--secondary);
+}
 /* Table styling */
 table {
     margin: auto;

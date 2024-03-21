@@ -52,7 +52,7 @@ function populateGallery() {
     var aptGallery = "";
     for (var i = 0, len = data.length; i < len; i++) {
       var value = data[i];
-      var details ='<p>Herbergi: ' + value.herbergi + '</p><p>Verð: ' + value.verd + '</p><p>Fermetrar: ' + value.birtflatarmal + '</p><p>Bílastæði: ' + value.bilastaedi + '</p>'
+      var details ='<p><i class="fa fa-bed"></i>' + value.herbergi + ' herbergi</p><p><i class="fas fa-ruler-combined"></i>' + value.birtflatarmal + ' fermetrar</p><p><i class="fas fa-parking"></i>' + value.bilastaedi + ' bílastæði</p><p><i class="fas fa-coins"></i>' + value.verd + ' m.kr</p><button class="card-button">Nánar</button>'
       var detailsContainer = $('#apt-'+value.ibudnr+' > div');
       detailsContainer.html(details);
       var detailsContainer = $('#apt-'+value.ibudnr).attr('data-stada', value.stada);
