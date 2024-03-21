@@ -1,20 +1,30 @@
 
 :root {
     /* Color palette */
-    --main: #EDF1D6;
-    --secondary: #9DC08B;
-    --accent: #40513B;
+    --main: #F0EBCE;
+    --secondary: #4E6C50;
+    --accent: #AA8B56;
 
     /* Neutral colors */
     --white-text: #ffffff;
     --dark-text: #000000;
 
+    /* Table colours */
+    --sold: #f15b5b;
+    --ferli: #FFA500;
+
     font-family: 'IBM Plex Sans', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
-}
 
+}
+.gradient {
+    background: #FFEFBA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 body, html {
     background-color: var(--main);
     height: 100%;
@@ -49,14 +59,16 @@ img {
     max-height: 90vh;
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
+    position: fixed;
     background-color: transparent;
-    position:fixed;
     top:0;
     right:0;
+    left:0;
     overflow: hidden;
     z-index:10;
+    display: flex;
+    justify-content: center;
 }
 
 /* Style the links inside the navigation bar */
@@ -79,20 +91,13 @@ img {
 .burger {
     display:none;
 }
-.logo {
-    position:fixed;
-    z-index:10;
-    float:left;
-    height:52px;
-    width: 52px;
-    background-image: url(../media/logo.png);
-    background-size: cover;
-}
+
 
 #scroll {
-    display:none;
     position: fixed;
     background-color: var(--main);
+    background: linear-gradient(to bottom, var(--main), transparent);
+    color: white;
     height:48px;
     width:100vw;
     opacity: 0.8;
@@ -176,7 +181,6 @@ img {
     cursor: pointer;
 }
 /* CTA Block styles */
-
 .cta-block {
     display: flex;
     flex-direction: column;
@@ -226,46 +230,143 @@ button .light:hover {
     color: var(--white-text);
 }
 
-#front-page-apt-view {
-    margin:10px 0px 10px 0;
-    display:flex;
-    align-self:center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#floor-plan-peek {
-    max-width: 60vw;
-}
+
 .hide {
     display: none!important;
 }
-.apt {
-    list-style: none;
-    margin: 20px;
-    padding:0;
+
+.apt-scroller {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    background-color: var(--accent);
+    border-radius:10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
-.apt-name {
-    font-size: 28px;
-    font-weight: bold;
+.apt-details {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-text);
+    width: 300px;
+    min-width:300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow: hidden; /* Ensures the image corners are also rounded */
+}
+.apt-details[data-stada="seld"] {
+    background-color: var(--sold)!important;
+}
+.apt-details[data-stada="ferli"] {
+    background-color: var(--ferli)!important;
 }
 
-.apt li {
+.apt-details img {
+    width: 100%;
+    height: 200px;
+    object-fit:contain;
+    min-width: 200px;
+}
+
+.apt-details .apt-details {
+    padding: 15px;
+}
+.apt-details.selected {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    
+}
+.apt-details:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+/* Table styling */
+table {
+    margin: auto;
+    min-width: 300px;
+    max-width: 100%;
+    border-collapse: collapse;
+    color: var(--dark-text);
+    border-radius: .4em;
+    overflow:visible;
+  }
+  .table-header{
+    border-top: none;
+    background: var(--accent); /* fallback for old browsers */
+    color: var(--white-text)
+}
+.rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: var(--white-text);
+}
+
+.rwd-table tr.apt-row.seld{
+    background-color: var(--sold)!important;
+    color: var(--white-textimportant)!important;
+
+}
+.rwd-table tr.apt-row.seld:hover{
+    background-color: var(--accent)!important;
+    color: var(--white-text)!important;
+
+}
+.desc::before {
+    content: "▾";
+    margin-right:4px;
+}
+.asc::before {
+    content: "▴";
+    margin-right:4px;
+}
+#filter-price, #filter-apt, #filter-size {
+    cursor:pointer;
+}
+
+
+
+.rwd-table tr:hover {
+    background-color: var(--accent);
+    color: var(--white-text);
+}
+.rwd-table .selected {
+    background-color: var(--accent);
+    color: var(--white-text);
+}
+
+.rwd-table td:first-child {
+    margin-top: .5em;
+}
+.rwd-table td:last-child {
+    margin-bottom: .5em;
+}
+.rwd-table th {
+    top:0;
+    position: sticky;
+    background: var(--accent); /* fallback for old browsers */
+    color: var(--white-text)
+}
+.rwd-table td {
     text-align: left;
-    border-bottom: 1px dashed var(--light-background-highlight);
 }
 
-
-.apt li strong {
-    display: inline-block;
+.rwd-table tr {
+    border-color: #bfbfbf;
 }
 
-.apt li span {
-    float: right;
+.rwd-table th,
+.rwd-table td {
+    padding: .5em 2em;
 }
-
-
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 760px) {
@@ -279,10 +380,7 @@ button .light:hover {
         margin:5px;
         z-index: 10;
     }
-    .logo {
-        position: fixed;
-        z-index: 10;
-    }
+  
 
     .bar1, .bar2,.bar3 {
         width: 35px;
@@ -325,6 +423,9 @@ button .light:hover {
     .show {
         display:flex;
     }
-
+    .rwd-table thead tr {
+        position:sticky;
+    
+    }
 
 }

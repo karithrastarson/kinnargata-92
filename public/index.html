@@ -23,10 +23,9 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans&family=Raleway:wght@100&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <header>
-    <div class="logo"> </div>
     <div class="topnav" id="myTopnav" onclick="toggleShow(this)">
         <a href="/home">Heim</a>
-        <a href="#news">Íbúðir</a>
+        <a href="/ibudir.html">Íbúðir</a>
         <a href="#contact">Teymið</a>
         <a href="#about">Hafa samband</a>
     </div>
@@ -40,9 +39,7 @@
 </header>
 <body>
 <div class="main-column">
-
     <div class="frontpage">
-        
     </div>
 
     <div class="wrap-box">
@@ -97,40 +94,176 @@
 
 <div class="image-map-flex">
     <img id="building" src="media/frontpage.jpg" usemap="#building-map">
-    <img id="floor" src="media/floor.png" usemap="#floor-map">
-   
 </div>
-<map id="map1" name="building-map">
-    <area target="_self" alt="48-0201" title="48-0201" href="/" coords="1764,1639,1750,1893,2000,1897,2177,1893,2856,1929,2873,1635,2177,1536" shape="poly">
-</map>
-<map id="map2" name="floor-map">
-    <area target="_self" alt="48-0102" title="48-0102" href="/" coords="121,675,119,1284,516,1285,516,677" shape="poly">
+<map id="building-map" name="building-map">
+    <area alt="0101" title="0101" coords="1600,1956,1599,2218,2187,2246,2844,2221,2844,1942,2176,1921" shape="poly">
+    <area alt="0201" title="0201" coords="2851,1907,2851,1606,2181,1533,1607,1645,1611,1914,2180,1882" shape="poly">
 </map>
 
 
-
-    <!--SNEAK PEEK APT SECTION-->
-    <div id="front-page-apt-view" class="hide">
-        <h2 id="front-page-apt-view-title"></h2>
-        <div class="row">
-            <img id="floor-plan-peek" src="media/images/floor-plans/42/0103.jpg"/>
-            <ul class="apt">
-                <li id="haed"><strong>Hæð:</strong><span>1</span></li>
-                <li id="hrb"><strong>Herbergi:</strong><span>77 m<sup>2</sup></sup></span></li>
-                <li id="staerd"><strong>Birtir fermetrar:</strong><span>77 m<sup>2</sup></span></li>
-                <li id="geymsla"><strong>Geymsla:</strong><span>7 m<sup>2</sup></span></li>
-                <li id="bilastaedi"><strong>Bílastæði í kjallara:</strong><span></span></li>
-                <li id="verd"><strong>Verð:</strong><span>Birt síðar</span></li>
-                <li id="skilalysing"><i class="fa fa-file-pdf-o" aria-hidden="true"></i><strong
-                        onclick="location.href='media/skilalysing.pdf'">Skilalýsing</strong></li>
-            </ul>
+<div class="apt-scroller">
+    <!--JS populates elements here-->
+    <div id="apt-0101" class="apt-details">
+        <h3>Íbúð 101</h3>
+        <img src="media/floor-plans/0101.jpg" alt="floor-plan-0101"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
         </div>
-        
-        <button id="front-page-apt-view-button" class="button dark-button"><i class="fa fa-info"></i>
-            Nánar</button>
     </div>
-
-
+    <div id="apt-0102" class="apt-details">
+        <h3>Íbúð 102</h3>
+        <img src="media/floor-plans/0102.jpg" alt="floor-plan-0102"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0103" class="apt-details">
+        <h3>Íbúð 103</h3>
+        <img src="media/floor-plans/0103.jpg" alt="floor-plan-0103"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0104" class="apt-details">
+        <h3>Íbúð 104</h3>
+        <img src="media/floor-plans/0101.jpg" alt="floor-plan-0104"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0201" class="apt-details">
+        <h3>Íbúð 201</h3>
+        <img src="media/floor-plans/0201.jpg" alt="floor-plan-0201"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0202" class="apt-details">
+        <h3>Íbúð 202</h3>
+        <img src="media/floor-plans/0202.jpg" alt="floor-plan-0202"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0203" class="apt-details">
+        <h3>Íbúð 203</h3>
+        <img src="media/floor-plans/0101.jpg" alt="floor-plan-0203"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0204" class="apt-details">
+        <h3>Íbúð 204</h3>
+        <img src="media/floor-plans/0204.jpg" alt="floor-plan-0204"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0301" class="apt-details">
+        <h3>Íbúð 301</h3>
+        <img src="media/floor-plans/0301.jpg" alt="floor-plan-0301"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0302" class="apt-details">
+        <h3>Íbúð 302</h3>
+        <img src="media/floor-plans/0302.jpg" alt="floor-plan-0302"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0303" class="apt-details">
+        <h3>Íbúð 303</h3>
+        <img src="media/floor-plans/0303.jpg" alt="floor-plan-0303"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0304" class="apt-details">
+        <h3>Íbúð 304</h3>
+        <img src="media/floor-plans/0304.jpg" alt="floor-plan-0304"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0401" class="apt-details">
+        <h3>Íbúð 401</h3>
+        <img src="media/floor-plans/0401.jpg" alt="floor-plan-0401"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0402" class="apt-details">
+        <h3>Íbúð 402</h3>
+        <img src="media/floor-plans/0402.jpg" alt="floor-plan-0402"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0403" class="apt-details">
+        <h3>Íbúð 403</h3>
+        <img src="media/floor-plans/0403.jpg" alt="floor-plan-0403"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+    <div id="apt-0404" class="apt-details">
+        <h3>Íbúð 404</h3>
+        <img src="media/floor-plans/0404.jpg" alt="floor-plan-0404"/>
+        <div>
+            <p>Herbergi:</p>
+            <p>Verð:</p>
+            <p>Fermetrar:</p>
+            <p>Bílastæði:</p>
+        </div>
+    </div>
+</div>
 </div>
 
 <script src="js/main.js"></script>
@@ -138,29 +271,6 @@
 <script src="js/image-map-highlighter.js"></script>
 
 
-<script>
-    $('map').imageMapResize();
-    
-
-
-    $('#floor, #building').maphilight(
-        {
-            fillColor: '00ff00',
-            fillOpacity: 0.7,
-            strokeColor: '000000'
-        }
-    );
-
-    
-    
-
-    // $('#apt1-img').mouseover(function(e) {
-    //         $('#apt1-floor').mouseover();
-    //     }).mouseout(function(e) {
-    //         $('#apt1-floor').mouseout();
-    //     }).click(function(e) { e.preventDefault(); });
-</script>
-<!--script src="js/image-map.js"></script-->
 </body>
 
 </html>
