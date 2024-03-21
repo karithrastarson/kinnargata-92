@@ -44,11 +44,10 @@ function populateGallery() {
     }
 
     $('area').click(function(e) {
-      
-      console.log("click: " + e.target.alt);
       var ibudNr = e.target.alt;
       var card = $('#apt-'+ibudNr);
       var itemPosition = card.offset().left;
+      $('.apt-details').removeClass('selected');
       card.toggleClass('selected');
       //var itemPosition = $('#apt-303').position().left; // Replace '#item' with the selector for the specific item
       $('.apt-scroller').animate({scrollLeft: itemPosition}, 'slow');
