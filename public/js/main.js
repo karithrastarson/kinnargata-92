@@ -1,6 +1,6 @@
 $( document ).ready(function() {
   //Event listener to listen to scroll event
-  
+  populateGallery();
   $('body').on('scroll', function(event) {
     //Change background of nav bar when scrolled
      if ($(this).scrollTop() > 50) {
@@ -26,23 +26,8 @@ $( document ).ready(function() {
           strokeColor: '000000'
       }
   );
-  
-  $.when(populateGallery()).done(function(){
-    $('area').mousedown(function(e) {
-      e.preventDefault();
-      //console.log("mousedown: " + e.target.alt);
-      var ibudNr = e.target.alt;
-      var card = $('#apt-'+ibudNr);
-      var itemPosition = card.offset().left;
-      card.toggleClass('selected');
-      //var itemPosition = $('#apt-303').position().left; // Replace '#item' with the selector for the specific item
-      $('.apt-scroller').animate({scrollLeft: itemPosition}, 'slow');
-  });
 
-  $('.apt-details').click(function(e) {
-    $(this).toggleClass('selected');
-  });
-});
+
 
 });
 
@@ -57,6 +42,21 @@ function populateGallery() {
       detailsContainer.html(details);
       var detailsContainer = $('#apt-'+value.ibudnr).attr('data-stada', value.stada);
     }
+
+    $('area').click(function(e) {
+      
+      console.log("click: " + e.target.alt);
+      var ibudNr = e.target.alt;
+      var card = $('#apt-'+ibudNr);
+      var itemPosition = card.offset().left;
+      card.toggleClass('selected');
+      //var itemPosition = $('#apt-303').position().left; // Replace '#item' with the selector for the specific item
+      $('.apt-scroller').animate({scrollLeft: itemPosition}, 'slow');
+  });
+  
+    $('.apt-details').click(function(e) {
+      $(this).toggleClass('selected');
+    });
     
     });
     
