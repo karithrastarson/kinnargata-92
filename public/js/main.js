@@ -46,15 +46,22 @@ function populateGallery() {
     $('area').click(function(e) {
       var ibudNr = e.target.alt;
       var card = $('#apt-'+ibudNr);
-      var itemPosition = card.offset().left;
+       var itemPosition = card.offset().left;
+       var scrollPosition = itemPosition - ($(window).width() / 2) + (card.outerWidth() / 2);
+
       $('.apt-details').removeClass('selected');
       card.toggleClass('selected');
-      //var itemPosition = $('#apt-303').position().left; // Replace '#item' with the selector for the specific item
-      $('.apt-scroller').animate({scrollLeft: itemPosition}, 'slow');
+      console.log("scroll to " + ibudNr + " at " + scrollPosition);
+      $('.apt-scroller').animate({scrollLeft: scrollPosition}, 'slow');
   });
   
     $('.apt-details').click(function(e) {
+      $('.apt-details').removeClass('selected');
       $(this).toggleClass('selected');
+      var ibudNr = $(this).attr('id').split('-')[1];
+      console.log("clicked on " + ibudNr);
+      $('area').mouseout();
+      $('[title='+ibudNr+']').mouseover();
     });
     
     });
