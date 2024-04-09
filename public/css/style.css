@@ -26,6 +26,9 @@ background: linear-gradient(to top, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Fir
 
 }
 body, html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--main);
     height: 100%;
     width: 100%;
@@ -33,7 +36,27 @@ body, html {
     padding: 0;
     overflow-x: hidden;
 }
+.footer {
+    background-color: var(--secondary);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px 0;
+}
 
+.footer-column {
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-column h4 {
+    margin: 10px;
+}
+.footer-column p {
+    margin: 0;
+}
 .main-column {
     width:100%;
     display: flex;
@@ -61,7 +84,7 @@ img {
 
 .topnav {
     position: fixed;
-    background-color: transparent;
+    background-color: var(--secondary);
     top:0;
     right:0;
     left:0;
@@ -73,7 +96,7 @@ img {
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    color: var(--dark-text);
+    color: var(--white-text);
     float: right;
     display: block;
     text-align: center;
@@ -84,25 +107,20 @@ img {
 }
 
 .topnav a:hover {
-    box-shadow: inset 450px 0 0 0 var(--dark-text);
+    box-shadow: inset 450px 50px 50px 50px var(--dark-text);
     color: var(--main)
   }
 
 .burger {
     display:none;
 }
-
-
-#scroll {
-    position: fixed;
-    background-color: var(--main);
-    background: linear-gradient(to bottom, var(--main), transparent);
-    color: white;
-    height:48px;
-    width:100vw;
-    opacity: 0.8;
-    top:0;
+.column {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 .wrap-box {
     display: flex;
     flex-flow: wrap row;
@@ -290,11 +308,17 @@ button .light:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: scale(1.05);
 }
+.specs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .specs > p > i {
     margin-right:10px;
 }
 
 .card-button {
+    margin:10px;
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -304,10 +328,12 @@ button .light:hover {
     color: var(--white-text);
     text-decoration: none;
     transition: background-color 0.3s ease;
+    text-align: center;
+
 }
 .card-button:hover {
-    background-color: var(--white-text);
-    color: var(--secondary);
+    background-color: var(--main);
+    color: var(--dark-text);
 }
 /* Table styling */
 table {
@@ -388,16 +414,69 @@ table {
     padding: .5em 2em;
 }
 
+    .info-column img {
+    max-width: 320px;
+    height: auto;
+}
+    .info-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    padding: 60px;
+    }
+    .apt-info-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.apt-info-table thead {
+    background-color: #f8f8f8;
+}
+
+.apt-info-table th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.apt-info-table tr:hover {background-color: #f5f5f5;}
+
 /*MEDIA QUERIES*/
 @media screen and (max-width: 760px) {
+    #scroll {
+        position: fixed;
+        background-color: var(--secondary);
+        color: white;
+        height:60px;
+        width:100vw;
+        opacity: 0.8;
+        top:0;
+    }
+    body {
+        padding-top:54px;
+    }
+    .info-column {
+        flex-direction: column;
+    }
+    .info-column img {
+        max-width: 100%;
+        max-height:50vh;
+        height: auto;
+    }
+    .apt-info-table {
+        width: 100%;
+        max-width: 100%;
+    }
     .burger {
         position: fixed;
         top:0;
         right:0;
         display: inline-block;
-        float: right;
+        
         cursor: pointer;
-        margin:5px;
+        margin:10px 12px 10px 12px;
         z-index: 10;
     }
   
@@ -405,7 +484,7 @@ table {
     .bar1, .bar2,.bar3 {
         width: 35px;
         height: 5px;
-        background-color: var(--dark-text);
+        background-color: var(--main);
         margin: 6px 0;
         transition: 0.4s;
         z-index:10;

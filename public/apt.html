@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="is">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PD455NMSQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4PD455NMSQ');
+</script>
+
+<title>Kinnargata 92</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<link rel="stylesheet" href="css/style.css?version=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans&family=Raleway:wght@100&family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="/home">Heim</a>
+        <a href="/ibudir.html">Íbúðir</a>
+        <a href="#contact">Teymið</a>
+        <a href="#about">Hafa samband</a>
+    </div>
+    <div class="burger" onclick="burgerCLick(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    
+
+</header>
+
+<body>
+    <div id="scroll"></div>
+    <!-- Main content -->
+    <div class="info-column">
+    <img id="apt-info-floor-plan" src="media/floor-plans/0101.jpg"/>
+        <div class="column">
+        <table class="apt-info-table">
+            <tr>
+                <th>Íbúð</th>
+                <td id="apt-nr">1</td>
+            </tr>
+            <tr>
+                <th>Hæð</th>
+                <td id="apt-floor">2</td>
+            </tr>
+            <tr>
+                <th>Birtir fermetrar</th>
+                <td id="apt-size">50 m2</td>
+            </tr>
+            <tr>
+                <th>Herbergi</th>
+                <td id="apt-rooms"">4</td>
+            </tr>
+            <tr>
+                <th>Geymsla</th>
+                <td id="apt-storage">20 m2</td>
+            </tr>
+            <tr>
+                <th>Bílastæði</th>
+                <td id="apt-parking">1</td>
+            </tr>
+            <tr>
+                <th>Verð</th>
+                <td id="apt-price">49.9m kr.</td>
+            </tr>
+            <tr>
+                <th>Skilalýsing</th>
+                <td>
+                    <a href="media/skilalysing.pdf">
+                        <i class="fas fa-file-pdf"></i> Sækja
+                    </a>
+                </td>
+            </tr>
+            
+            <!-- Add more rows as needed -->
+        </table>
+    <button id="contact-info" class="card-button">
+        Hafa samband
+    </button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/apt-details.js"></script>
+</body>
+<footer>
+    <div class="footer">
+        <div class="footer-column">
+            <h4>© Vesturvík ehf.</h4>
+            <p>kt.590619-0860</p>
+        </div>
+    </div>
+</footer>
+
+
+</html>
