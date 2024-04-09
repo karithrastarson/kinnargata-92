@@ -5,12 +5,14 @@ $( document ).ready(function() {
     //Change background of nav bar when scrolled
      if ($(this).scrollTop() > 50) {
          $('#scroll').css('background', 'transparent');
+        $('.bar1, .bar2,.bar3').css('background-color', 'var(--secondary)');
          $('.topnav a').animate({
  
       }, 500);
      }
      else {
      $('#scroll').css('background', 'var(--secondary)');
+     $('.bar1, .bar2,.bar3').css('background-color', 'var(--main)');
      $('.topnav a').animate({
 
   }, 500);
