@@ -67,7 +67,7 @@ body, html {
 .frontpage {
     height:100vh;
     width:100vw;
-    background-image: url(../media/frontpage.jpg);
+    background-image: url(../media/demo-hover.png);
     background-size: cover;
     background-position: center;
 
@@ -443,13 +443,15 @@ table {
 
 .apt-info-table tr:hover {background-color: #f5f5f5;}
 
+
+
 /*MEDIA QUERIES*/
 @media screen and (max-width: 760px) {
     #scroll {
         position: fixed;
         background-color: var(--secondary);
         color: white;
-        height:60px;
+        height:54px;
         width:100vw;
         opacity: 0.8;
         top:0;
