@@ -39,7 +39,14 @@ function populateGallery() {
     var aptGallery = "";
     for (var i = 0, len = data.length; i < len; i++) {
       var value = data[i];
-      var details ='<p><i class="fa fa-bed"></i>' + value.herbergi + ' herbergi</p><p><i class="fas fa-ruler-combined"></i>' + value.birtflatarmal + ' fermetrar</p><p><i class="fas fa-parking"></i>' + value.bilastaedi + ' bílastæði</p><p><i class="fas fa-coins"></i>' + value.verd + ' m.kr</p><a href="apt.html?apt=' + value.ibudnr + '" class="card-button">Nánar</a>'
+      var seld = (String(value.seld).toLowerCase() === "já");
+      var ferli =  !(String(value.stada).toLowerCase() === "laus");
+      var verd = (ferli) ?  "Í söluferli" : value.verd + "m kr.";
+      if (seld) {
+        verd = "SELD";
+      }
+
+      var details ='<p><i class="fa fa-bed"></i>' + value.herbergi + ' herbergi</p><p><i class="fas fa-ruler-combined"></i>' + value.birtflatarmal + ' fermetrar</p><p><i class="fas fa-parking"></i>' + value.bilastaedi + ' bílastæði</p><p><i class="fas fa-coins"></i>' + verd + '</p><a href="apt.html?apt=' + value.ibudnr + '" class="card-button">Nánar</a>'
       var detailsContainer = $('#apt-'+value.ibudnr+' > div');
       detailsContainer.html(details);
       var detailsContainer = $('#apt-'+value.ibudnr).attr('data-stada', value.stada);
