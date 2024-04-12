@@ -9,8 +9,9 @@ $(document).ready(function () {
             /* Data point found */
             found = true;
             var seld = (String(value.seld).toLowerCase() === "já");
-            $("#apt-info-floor-plan").attr('src', 'media/floor-plans/' + aptId+'.jpg');
-            $("#apt-nr").text("Íbúð " + value.id + (seld ? " (SELD)":(value.ferli != null ? " (í söluferli)" : "")));
+            $("#apt-info-floor-plan").attr('src', 'media/floor-plans/' + aptId+'.png');
+            $("#apt-name").text("Íbúð " + value.id + (seld ? " (SELD)":(value.ferli != null ? " (í söluferli)" : "")));
+            
             $("#apt-floor").text(value.haed);
             $("#apt-size").text(value.birtflatarmal);
             $("#apt-storage").text(value.geymsla);
