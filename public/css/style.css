@@ -519,10 +519,12 @@ padding:20px;
     }
     .info-column {
         flex-direction: column;
+        margin: 0px;
+        padding: 20px;
     }
     .info-column img {
-        max-width: 100%;
-        max-height:75%;
+        width: 100%;
+        max-width:100%;
         height: auto;
     }
     .apt-info-table {
