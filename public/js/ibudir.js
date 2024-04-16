@@ -1,9 +1,37 @@
 $(document).ready(function () {
 
+    var modal = document.getElementById("apt-modal");
+  // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
     //Add event listener to rows. When row is clicked, then add class selected to it
     $(document).on('click', '.apt-row', function () {
+        // Get the modal
         $(this).toggleClass('selected');
+        console.log("clicked on " + $(this).find('td:first').text());
+      
+        var aptNr = $(this).find('td:first').text();
+        console.log("apt nr: " + aptNr);
+        var imgLink = "media/floor-plans/" + aptNr + ".png";
+        var detailsLink = "/upplysingar.html?ibud=" + aptNr;
+        modal.style.display = "block";
+        $('.modal-content img').attr('src', imgLink);
+        $('.modal-conetnt a').attr('href',detailsLink);
     });
+
+    $(document).on('click', '.close', function(){
+      modal.style.display = "none";
+      $('.apt-row').removeClass('selected');
+    });
+    // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    //remove class 'selected' from all lines
+    $('.apt-row').removeClass('selected');
+  }
+}
   
   $('#hidesold').change(
     function(){
@@ -93,27 +121,12 @@ function updateTable(hidesold=false, sortBy="default") {
     
           var row = `
       <tr class="apt-row ${seld ? "seld" : ""} ${ferli ? "ferli" : ""}" data-size="${Math.ceil(parseFloat(value.staerd))}">
-          <td data-th="Íbúð">
-              ${value.ibudnr}
-          </td>
-          <td data-th="Hæð">
-              ${value.haed}
-          </td>
-          <td data-th="Herbergi">
-              ${value.herbergi}
-          </td>
-          <td data-th="Bílastæði í kjallara">
-              ${value.bilastaedi}
-          </td>
-          <td data-th="Birtir fermetrar">
-              ${value.birtflatarmal}
-          </td>
-          <td data-th="Verð">
-              ${seld ? "Seld" : (value.ferli != null ? "Í ferli" : value.verd)}
-          </td>
-          <td data-th="Nánar" data-img="media/images/floor-plans/${value.husnr}/${value.ibudnr}.jpg">
-              <a class="more-info" data-href="upplysingar.html?hus=${value.husnr}&ibud=${value.ibudnr}"><i class="fa fa-eye ${seld ? "seld" : ""}"></i></a>
-          </td>
+          <td data-th="Íbúð">${value.ibudnr}</td>
+          <td data-th="Hæð">${value.haed}</td>
+          <td data-th="Herbergi">${value.herbergi}</td>
+          <td data-th="Bílastæði í kjallara">${value.bilastaedi}</td>
+          <td data-th="Birtir fermetrar">${value.birtflatarmal}</td>
+          <td data-th="Verð">${seld ? "Seld" : (value.ferli != null ? "Í ferli" : value.verd)}</td>
       </tr>`
 
           $('#apt-table tbody tr:last').after(row);

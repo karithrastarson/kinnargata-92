@@ -502,8 +502,76 @@ padding:20px;
     padding-right:8px;
 }
 
+/*Modal styling*/
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative; /* Add this line */
+
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border: 1px solid #888;
+  height:70%;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+.modal-content img {
+  height:70%;
+  width: auto;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+    color: #aaa;
+    top: 10px;
+  right: 10px;
+  margin:50px 20px 0 0;
+    float: right;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /*MEDIA QUERIES*/
 @media screen and (max-width: 760px) {
+    .modal-content {
+        height:100%;
+        width: 100%; /* Could be more or less, depending on screen size */
+      }
+      .modal-content img {
+        width:60%;
+        height: auto;
+      }
+      .close {
+        top: 30px;
+        right: 30px;
+      }
+
     .agency {
         width: 90%;
     }
