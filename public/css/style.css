@@ -564,7 +564,7 @@ padding:20px;
         width: 100%; /* Could be more or less, depending on screen size */
       }
       .modal-content img {
-        width:60%;
+        max-width:80%;
         height: auto;
       }
       .close {

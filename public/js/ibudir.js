@@ -14,7 +14,7 @@ $(document).ready(function () {
         var aptNr = $(this).find('td:first').text();
         console.log("apt nr: " + aptNr);
         var imgLink = "media/floor-plans/" + aptNr + ".png";
-        var detailsLink = "/upplysingar.html?ibud=" + aptNr;
+        var detailsLink = "/apt.html?ibud=" + aptNr;
         modal.style.display = "block";
         $('.modal-content img').attr('src', imgLink);
         $('.modal-conetnt a').attr('href',detailsLink);
