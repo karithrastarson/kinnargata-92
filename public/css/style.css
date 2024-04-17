@@ -139,7 +139,7 @@ img {
     background-color: var(--accent);
     border-radius:10px;
 }
-.image-map-flex {
+#building {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
