@@ -46,7 +46,7 @@ function populateGallery() {
         verd = "SELD";
       }
 
-      var details ='<p><i class="fa fa-bed"></i>' + value.herbergi + ' herbergi</p><p><i class="fas fa-ruler-combined"></i>' + value.birtflatarmal + ' fermetrar</p><p><i class="fas fa-parking"></i>' + value.bilastaedi + ' bílastæði</p><p><i class="fas fa-coins"></i>' + verd + '</p><a href="apt.html?apt=' + value.ibudnr + '" class="card-button">Nánar</a>'
+      var details ='<p><i class="fa fa-bed"></i>' + value.herbergi + ' herbergi</p><p><i class="fas fa-ruler-combined"></i>' + value.birtflatarmal + ' fermetrar</p><p><i class="fas fa-parking"></i>' + value.bilastaedi + ' bílastæði</p><p><i class="fas fa-coins"></i>' + verd + '</p><a href="ibud.html?apt=' + value.ibudnr + '" class="card-button">Nánar</a>'
       var detailsContainer = $('#apt-'+value.ibudnr+' > div');
       detailsContainer.html(details);
       var detailsContainer = $('#apt-'+value.ibudnr).attr('data-stada', value.stada);
