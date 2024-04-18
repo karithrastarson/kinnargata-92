@@ -54,7 +54,7 @@ function updateColor() {
         default:
           color = green;
       } 
-      console.log("Setting color for " + value.ibudnr + " to " + color);
+      
       var maphilight = '{"fillColor":"' + color + '"}'
       $('#'+value.ibudnr).attr('data-maphilight', maphilight);
     }
@@ -83,10 +83,11 @@ function populateGallery() {
 
     $('area').click(function(e) {
       var ibudNr = e.target.alt;
-      var card = $('#apt-'+ibudNr);
-       //var itemPosition = card.offset().left;
-       var itemPosition = card[0].getBoundingClientRect().left + window.scrollX;
-       var scrollPosition = itemPosition - ($(window).width() / 2) + (card.outerWidth() / 2);
+      console.log("clicked on " + ibudNr);
+      var card = $('#apt-'+ibudNr); 
+      var index = card.index();
+      var itemWidth = $('.apt-details').outerWidth(true); // Get the width of a slider item, including margins
+      var scrollPosition = itemWidth * index;
 
       $('.apt-details').removeClass('selected');
       card.toggleClass('selected');
