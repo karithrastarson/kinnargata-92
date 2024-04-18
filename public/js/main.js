@@ -19,19 +19,48 @@ $( document ).ready(function() {
      }
   });
   
-
+  updateColor();
   $('#building-map').imageMapResize();
+  
   $('#building').maphilight(
       {
           fillColor: '00ff00',
-          fillOpacity: 0.7,
-          strokeColor: '000000'
+          fillOpacity: 0.3,
+          strokeOpacity: 0.1,
       }
   );
 
 
 
 });
+
+function updateColor() {
+  var yellow = "FFFF00";
+  var red = "FF0000";
+  var green = "00FF00";
+
+  $.getJSON('data/data.json', function(data) {  
+    for (var i = 0, len = data.length; i < len; i++) {
+      var value = data[i];
+      var stada =  String(value.stada).toLowerCase();
+      color = "00ff00";
+      switch (stada) {
+        case "frátekin":
+          color = yellow;
+          break;
+        case "seld":
+          color = red;
+          break;
+        default:
+          color = green;
+      } 
+      console.log("Setting color for " + value.ibudnr + " to " + color);
+      var maphilight = '{"fillColor":"' + color + '"}'
+      $('#'+value.ibudnr).attr('data-maphilight', maphilight);
+    }
+  });
+
+}
 
 function populateGallery() {
   //Load data json file and loop through the data to populate the gallery
