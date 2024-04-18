@@ -20,7 +20,7 @@ $( document ).ready(function() {
   });
   
   updateColor();
-  $('#building-map').imageMapResize();
+  
   
   $('#building').maphilight(
       {
@@ -30,7 +30,7 @@ $( document ).ready(function() {
       }
   );
 
-
+  $('#building-map').imageMapResize();
 
 });
 
