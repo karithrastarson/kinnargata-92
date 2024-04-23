@@ -83,7 +83,8 @@ function populateGallery() {
 
     $('area').click(function(e) {
       var ibudNr = e.target.alt;
-      console.log("clicked on " + ibudNr);
+      $('area').mouseout();
+      $('[title='+ibudNr+']').mouseover();
       var card = $('#apt-'+ibudNr); 
       var index = card.index();
       var itemWidth = $('.apt-details').outerWidth(true); // Get the width of a slider item, including margins
