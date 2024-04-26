@@ -529,7 +529,6 @@ justify-content: space-evenly;
 flex-wrap: wrap;
 }
 .agency {
-height: fit-content;
 width:25vw;
 min-width:230px;
 display:flex;
@@ -629,6 +628,7 @@ padding:20px;
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 760px) {
+
     .modal-content {
         height:100%;
         width: 100%; /* Could be more or less, depending on screen size */
@@ -640,7 +640,8 @@ padding:20px;
       }
 
     .agency {
-        width: 90%;
+        height: fit-content;
+        width: 40%;
     }
     #scroll {
         position: fixed;
