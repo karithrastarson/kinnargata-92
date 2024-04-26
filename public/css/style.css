@@ -1,7 +1,7 @@
 
 :root {
     /* Color palette */
-    --main: #F0EBCE;
+    --main: #eeeeee;
     --secondary: rgb(78, 108, 80);
     --accent: #AA8B56;
 
@@ -107,7 +107,8 @@ padding:20px;
 
 .topnav {
     position: fixed;
-    background-color: var(--secondary);
+    background: linear-gradient(to bottom, rgb(72, 72, 72), transparent);
+    height:80px;
     top:0;
     right:0;
     left:0;
@@ -120,13 +121,14 @@ padding:20px;
     position: absolute;
     top: 10px;
     left: 10px;
-    height: 35px;
+    height: 60px;
     z-index: 11;
     cursor: pointer;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
+    align-self:center;
     color: var(--white-text);
     float: right;
     display: block;
@@ -641,10 +643,13 @@ padding:20px;
         position: fixed;
         background-color: var(--secondary);
         color: white;
-        height:54px;
+        height:70px;
         width:100vw;
-        opacity: 0.8;
         top:0;
+        z-index: 1;
+    }
+    .logo {
+        height:50px;
     }
     body {
         padding-top:54px;
@@ -669,7 +674,7 @@ padding:20px;
         display: inline-block;
         
         cursor: pointer;
-        margin:10px 12px 10px 12px;
+        margin:18px 18px 10px 12px;
         z-index: 10;
     }
   
