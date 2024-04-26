@@ -84,14 +84,16 @@ body, html {
     justify-content: center;
 }
 #mc_embed_signup {
-background-color: var(--secondary);
-color: var(--white-text);
+background-color: var(--white-text);
+border-radius:10px;
+color: var(--dark-text);
 width: 80%;
 display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding:20px;
+padding: 0px 20px 0px 20px;
+margin-bottom:20px;
 }
 
 #mc_embed_signup form {
@@ -183,6 +185,8 @@ padding:20px;
     max-height:80%;
 }
 .subscribe {
+    background-color: var(--secondary);
+    color: var(--white-text);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -303,7 +307,6 @@ button .light:hover {
     padding: 20px;
     margin: 10px;
     width: 100%;
-    background-color: var(--accent);
     border-radius:10px;
     overflow-x: scroll;
     overflow-y: hidden;
