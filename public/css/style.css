@@ -192,9 +192,11 @@ body, html {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    margin:20px;
 }
 #apt-info-floor-plan {
     max-height:80vh;
+    max-width:80vw;
 }
 .subscribe {
     background-color: var(--secondary);
