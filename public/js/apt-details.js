@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var aptId = getUrlParameter('apt');
+  var aptId = getUrlParameter('ibud');
   
   $.getJSON("data/data.json", function(data){
     var found = false;

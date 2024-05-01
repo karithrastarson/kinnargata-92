@@ -17,7 +17,7 @@ $(document).ready(function () {
         var detailsLink = "/ibud.html?ibud=" + aptNr;
         modal.style.display = "block";
         $('.modal-content img').attr('src', imgLink);
-        $('.modal-conetnt a').attr('href',detailsLink);
+        $('.modal-content a').attr('href',detailsLink);
     });
 
     $(document).on('click', '.close', function(){
