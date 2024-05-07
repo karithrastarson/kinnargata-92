@@ -659,7 +659,7 @@ table {
     max-width:50%;
 }
 .team-overview h2 {
-    font-size: 3em;
+    font-size: calc(16px + 2vw);
 }
 .team-box:hover {
     transform: scale(1.05);
@@ -705,6 +705,7 @@ table {
     .team-overview h2 {
         text-align: center;
         margin:10px;
+        font-size: calc(16px + 2vw);
     }
 
 
