@@ -14,6 +14,8 @@ $(document).ready(function () {
             
             $("#apt-floor").text(value.haed);
             $("#apt-size").text(value.birtflatarmal);
+            $("#apt-rooms").text(value.herbergi);
+            $("#apt-bedrooms").text(value.svefnherbergi);
             $("#apt-storage").text(value.geymsla);
             $("#apt-parking").text(value.bilastaedi);
             if(!value.golfbilastaedi) {
