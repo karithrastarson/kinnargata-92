@@ -16,6 +16,9 @@ $(document).ready(function () {
             $("#apt-size").text(value.birtflatarmal);
             $("#apt-storage").text(value.geymsla);
             $("#apt-parking").text(value.bilastaedi);
+            if(!value.golfbilastaedi) {
+                $("table.apt-info-table tr:contains('Golfbílastæði')").remove();
+            }
             $('#contact-info').click(function(){
               location.href = "mailto:fyrirspurnir@vesturvik.is?subject=Fyrirspurn um íbúð " + value.id;
             });
