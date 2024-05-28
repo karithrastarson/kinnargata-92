@@ -195,8 +195,7 @@ body, html {
     margin:20px;
 }
 #apt-info-floor-plan {
-    max-height:80vh;
-    max-width:80vw;
+    max-width:90vw;
 }
 .subscribe {
     background-color: var(--secondary);
