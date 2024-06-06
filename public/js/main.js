@@ -1,4 +1,32 @@
 $( document ).ready(function() {
+  var sala = getUrlParameter('sala');
+  if (sala !== false){
+    localStorage.setItem("sala", sala);
+}
+var soluRedirect = localStorage.getItem("sala");
+switch(soluRedirect) {
+    case "as":
+        $("#as").show();
+        $("#torg").hide();
+        $("#hraunhamar").hide();
+        break;
+    case "torg":
+        $("#torg").show();
+        $("#as").hide();
+        $("#hraunhamar").hide();
+        break;
+    case "hraunhamar":
+            $("#hraunhamar").show();
+            $("#torg").hide();
+            $("#as").hide();
+            break;
+    default:
+        $("#torg").show();
+        $("#as").show();
+        $("#hraunhamar").show();
+        break;
+}
+
   //Event listener to listen to scroll event
   populateGallery();
   $('body').on('scroll', function(event) {
@@ -109,6 +137,22 @@ function populateGallery() {
     
   
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+      }
+  }
+  return false;
+};
 
 function burgerCLick(x) {
   x.classList.toggle("change");
