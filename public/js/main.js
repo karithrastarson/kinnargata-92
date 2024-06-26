@@ -4,6 +4,10 @@ $( document ).ready(function() {
     localStorage.setItem("sala", sala);
 }
 var soluRedirect = localStorage.getItem("sala");
+            $("#hraunhamar-1").hide();
+            $("#hraunhamar-2").hide();
+            $("#hraunhamar-3").hide();
+            $("#hraunhamar-4").hide();
 switch(soluRedirect) {
     case "as":
         $("#as").show();
@@ -17,6 +21,10 @@ switch(soluRedirect) {
         break;
     case "hraunhamar":
             $("#hraunhamar").show();
+            $("#hraunhamar-1").show();
+            $("#hraunhamar-2").show();
+            $("#hraunhamar-3").show();
+            $("#hraunhamar-4").show();
             $("#torg").hide();
             $("#as").hide();
             break;
